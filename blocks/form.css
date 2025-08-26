@@ -1,0 +1,30 @@
+.form__field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form__submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 0;
+  border: 0;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.form__submit:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,17 @@
+.header {
+  padding: 28px 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.header__sup {
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 6px;
+  opacity: 0.85;
+}
