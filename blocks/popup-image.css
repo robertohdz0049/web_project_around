@@ -1,0 +1,20 @@
+.popup__image-container {
+  position: relative;
+  background: transparent;
+}
+.popup__figure {
+  margin: 0;
+}
+.popup__image {
+  display: block;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+.popup__caption {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 14px;
+}

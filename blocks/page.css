@@ -6,37 +6,16 @@ body {
   height: 100%;
 }
 
-body,
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style: none;
-}
-
-body {
-  background: #000;
+.page {
+  min-height: 100vh;
+  background-color: #000;
   color: #fff;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", Arial, sans-serif;
 }
 
-.page__content {
+.page__container {
   max-width: 880px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-img,
-svg,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  padding: 0 19px;
+  box-sizing: border-box;
 }
