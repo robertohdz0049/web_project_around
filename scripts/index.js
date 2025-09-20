@@ -11,6 +11,7 @@ const cardsContainer = document.querySelector(".elements__list");
 const cardTemplate = document.querySelector("#card-template");
 
 const profileName = document.querySelector(".profile__name");
+const profileNameText = document.querySelector(".profile__name-text");
 const profileAbout = document.querySelector(".profile__about");
 const editIconButton = document.querySelector(".profile__edit-icon");
 
@@ -92,18 +93,25 @@ initialCards.forEach((data) => {
 
 if (editIconButton) {
   editIconButton.addEventListener("click", () => {
-    profileForm.elements["name"].value = profileName.textContent.trim();
+    profileForm.elements["name"].value = profileNameText.textContent.trim();
     profileForm.elements["about"].value = profileAbout.textContent.trim();
     openPopup(popupEdit);
   });
 }
 
-profileForm.addEventListener("submit", (evt) => {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = profileForm.elements["name"].value.trim();
-  profileAbout.textContent = profileForm.elements["about"].value.trim();
+
+  const nameInput = profileForm.elements["name"];
+  const aboutInput = profileForm.elements["about"];
+
+  profileNameText.textContent = nameInput.value.trim();
+  profileAbout.textContent = aboutInput.value.trim();
+
   closePopup(popupEdit);
-});
+}
+
+profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 addCardOpenBtn.addEventListener("click", () => {
   addCardForm.reset();
@@ -118,4 +126,13 @@ addCardForm.addEventListener("submit", (evt) => {
   const card = createCard({ name: title, link });
   cardsContainer.prepend(card);
   closePopup(popupAdd);
+});
+
+enableValidation({
+  formSelector: ".form",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".form__submit",
+  inactiveButtonClass: "button_inactive",
+  inputErrorClass: "form__input_type_error",
+  errorClass: "form__input-error_active",
 });
